@@ -604,9 +604,29 @@ document.write("Scores of Students: " + scores + "<br>");
 scores.sort();
 document.write("Ordered Scores of Students: " + scores);
 
+//11.
+var cities = ["Quetta", "Karachi", "Islamabad", "Lahore", "Peshawar"];
+document.write("Cities list: <br>" + cities + "<br>");
+var selectedCities = cities.slice(2, 4);
+document.write("Selected Cities list: <br>" + selectedCities);
 
+//12.
+var arr1 = ["This", "is", "my", "cat"];
+document.write("Array: <br>" + arr1 + "<br>");
+var string = arr1.join(" ");
+document.write("String: <br>" + string);
 
-
+//13.
+var devices = ["keyboard", "mouse", "printer", "monitor"];
+document.write("Devices : <br/>" + devices + "<br>");
+var device1 = devices.shift();
+document.write("Out : <br>" + device1 + "<br>");
+var device2 = devices.shift();
+document.write("Out : <br>" + device2 + "<br>");
+var device3 = devices.shift();
+document.write("Out : <br>" + device3 + "<br>");
+var device4 = devices.shift();
+document.write("Out : <br>" + device4 + "<br>");
 
 
 
