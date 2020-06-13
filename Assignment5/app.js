@@ -304,62 +304,62 @@ if (fuel < 0.25){
 //5.
 
 //a.
-// var a = 4;
-// if (++a === 5){
-// alert("given condition for variable a is true");
-// }
+var a = 4;
+if (++a === 5){
+alert("given condition for variable a is true");
+}
 
 // ALERT MESSAGE DISPLAYED - CONDITION TRUE
 
 // b.
-//  var b = 82;
-// if (b++ === 83){
-// alert("given condition for variable b is true");
-// }
+ var b = 82;
+if (b++ === 83){
+alert("given condition for variable b is true");
+}
 
 // ALERT MESSAGE NOT DISPLAYED - CONDITION FALSE
 
 // c.
-// var c = 12;
-// if (c++ === 13){
-// alert("condition 1 is true");
-// }
-// if (c === 13){
-// alert("condition 2 is true");
-// }
-// if (++c < 14){
-// alert("condition 3 is true");
-// }
-// if(c === 14){
-// alert("condition 4 is true");
-// }
+var c = 12;
+if (c++ === 13){
+alert("condition 1 is true");
+}
+if (c === 13){
+alert("condition 2 is true");
+}
+if (++c < 14){
+alert("condition 3 is true");
+}
+if(c === 14){
+alert("condition 4 is true");
+}
 
 // ALERT MESSAGE DISPLAYED - CONDITION 2 IS TRUE
 
 // d.
-// var materialCost = 20000;
-// var laborCost = 2000;
-// var totalCost = materialCost + laborCost;
-// if (totalCost === laborCost + materialCost){
-// alert("The cost equals");
-// }
+var materialCost = 20000;
+var laborCost = 2000;
+var totalCost = materialCost + laborCost;
+if (totalCost === laborCost + materialCost){
+alert("The cost equals");
+}
 
 // ALERT MESSAGE DISPLAYED - CONDITION IS TRUE
 
 // e.
-// if (true){
-// alert("True");
-// }
-// if (false){
-// alert("False");
-// }
+if (true){
+alert("True");
+}
+if (false){
+alert("False");
+}
 
 // ALERT MESSAGE DISPLAYED - CONDITION IS TRUE
 
 // f.
-// if("car" < "cat"){
-// alert("car is smaller than cat");
-// }
+if("car" < "cat"){
+alert("car is smaller than cat");
+}
 
 // ALERT MESSAGE DISPLAYED - CONDITION IS TRUE
 
