@@ -385,7 +385,7 @@ if (percentage >= 80) {
     grade = "Fail";
     remarks = "Sorry";
 }
-document.write("<h1>Marks Sheet</h1>" + "<br>Total Marks :" + totMarks + "<br>Marks Obtained :" + marksObt + "<br>Percentage :" + percentage + "%" + "<br>Grade :" + grade + "<br>Remarks :" + remarks);
+document.write("<h1>Marks Sheet</h1>" + "<br>Total Marks :" + totMarks + "<br>Marks Obtained :" + marksObt + "<br>Percentage :" + percentage + "%" + "<br>Grade :" + grade + "<br>Remarks :" + remarks + "<br");
 
 
 //7.
@@ -553,7 +553,7 @@ var arr4 = ["Apple", 10, true, "Karachi"];
 var arr5 = ["SSC", "HSC", "BCS", "BS", "BCOM", "MS", "M.Phil", "PhD"];
 document.write("Qualifications: <br>");
 for (var i = 0; i <= 7; i++) {
-    document.write(i + 1 + ")" + arr5[i] + "<br>")
+    document.write("<br>" + i + 1 + ")" + arr5[i] + "<br>")
 }
 
 //8.
@@ -602,23 +602,23 @@ document.write(colors + "<br>");
 var scores = [320, 230, 480, 120];
 document.write("Scores of Students: " + scores + "<br>");
 scores.sort();
-document.write("Ordered Scores of Students: " + scores);
+document.write("Ordered Scores of Students: " + scores + "<br>");
 
 //11.
 var cities = ["Quetta", "Karachi", "Islamabad", "Lahore", "Peshawar"];
 document.write("Cities list: <br>" + cities + "<br>");
 var selectedCities = cities.slice(2, 4);
-document.write("Selected Cities list: <br>" + selectedCities);
+document.write("Selected Cities list: <br>" + selectedCities + "<br>");
 
 //12.
 var arr1 = ["This", "is", "my", "cat"];
 document.write("Array: <br>" + arr1 + "<br>");
 var string = arr1.join(" ");
-document.write("String: <br>" + string);
+document.write("String: <br>" + string + "<br>");
 
 //13.
 var devices = ["keyboard", "mouse", "printer", "monitor"];
-document.write("Devices : <br/>" + devices + "<br>");
+document.write("Devices : <br>" + devices + "<br>");
 var device1 = devices.shift();
 document.write("Out : <br>" + device1 + "<br>");
 var device2 = devices.shift();
@@ -628,7 +628,122 @@ document.write("Out : <br>" + device3 + "<br>");
 var device4 = devices.shift();
 document.write("Out : <br>" + device4 + "<br>");
 
+//14.
+var devices = ["keyboard", "mouse", "printer", "monitor"];
+document.write("Devices : <br>" + devices + "<br>");
+var device1 = devices.pop();
+document.write("Out : <br>" + device1 + "<br>");
+var device2 = devices.pop();
+document.write("Out : <br>" + device2 + "<br>");
+var device3 = devices.pop();
+document.write("Out : <br>" + device3 + "<br>");
+var device4 = devices.pop();
+document.write("Out : <br>" + device4 + "<br>");
+
+//15.
+var phones = ["Apple", "Samsung", "Motorla", "Nokia", "Sony", "Haier"];
+document.write("<select>" + "<option>" + phones[0] + "</option>" + "<option>" + phones[1] + "</option>" + "<option>" + phones[2] + "</option>" + "<option>" + phones[3] + "</option>" + "<option>" + phones[4] + "</option>" + "<option>" + phones[5] + "</option>" + "</select>" + "<br>")
 
 
+//-------------------------------------------------Assignment 17-20-----------------------------------------------------------------
 
+//1.
+var arr1 = [[], [], []];
+
+//2.
+var arr2 = [[], [], []];
+arr2[0] = ["0", "1", "2", "3"];
+arr2[1] = ["1", "0", "1", "2"];
+arr2[2] = ["2", "1", "0", "1"];
+arr3 = arr2[0].join(" ");
+arr4 = arr2[1].join(" ");
+arr5 = arr2[2].join(" ");
+document.write(arr3 + "<br>" + arr4 + "<br>" + arr5 + "<br>");
+
+//3.
+for (var i = 1; i <= 10; i++) {
+    document.write(i + "<br>")
+}
+
+//4.
+var num = +prompt("Enter Number of Table", "5");
+var len = +prompt("Enter Length of Table", "10");
+document.write("Table of " + num + "<br>");
+document.write("Length: " + len + "<br>");
+for (i = 1; i <= len; i++) {
+    document.write(num + " x " + i + " = " + (i * num) + "<br>");
+}
+
+//5.
+var fruits = ["apple", "banana", "mango", "orange", "strawberry"];
+var len = fruits.length;
+for (var i = 0; i < len; i++) {
+    document.write("Element at index " + i + " is " + fruits[i] + "<br>")
+}
+
+//6.
+
+//a.
+var num = [];
+for (var i = 0; i < 15; i++) {
+    num[i] = i + 1;
+}
+document.write("<h2>Counting :</h2>" + num + "<br>");
+
+//b.
+document.write("<h2>Reverse Counting :</h2>" + num.reverse() + "<br>");
+
+//c.
+var even = [];
+for (var a = 0; a <= 20; a++) if (a % 2 == 0) {
+    even[a] = a;
+}
+var even1 = even.join(" ");
+document.write("<h2>Even :</h2>" + even1 + "<br>");
+
+//d.
+var odd = [];
+for (var b = 1; b <= 20; b++) if (b % 2 !== 0) {
+    odd[b] = b;
+}
+var odd1 = odd.join(" ");
+document.write("<h2>Odd :</h2>" + odd1 + "<br>");
+
+//e.
+var series = [];
+for (var d = 1; d <= 20; d++) if (d % 2 === 0) {
+    series[d] = d + "k";
+}
+var series1 = series.join(" ");
+document.write("<h2>Series :</h2>" + series1 + "<br>");
+
+//7.
+var a = ["cake", "apple pie", "cookie", "chips", "patties"];
+var x = prompt("Welcome to Bakery!\nWhat do you want to order?");
+var b = a.indexOf(x);
+if (b < 0) {
+    alert("We are sorry " + x + " is not available!")
+} else {
+    alert(x + " is available!")
+}
+
+//8.
+var arr = [24, 53, 78, 91, 12];
+var a = arr.sort();
+var b = arr[4];
+document.write("Array items: " + arr + "<br>The Largest number is " + b + "<br>");
+
+//9.
+var arr = [24, 53, 78, 91, 12];
+var a = arr.sort();
+var b = arr[0];
+document.write("Array items: " + arr + "<br>The Smallest number is " + b + "<br>");
+
+//10.
+var a = [];
+for (var i = 1; i <= 100; i++) if (i % 5 === 0) {
+    a[i] = i;
+}
+var b = a.join(" ");
+document.write(b);
 
