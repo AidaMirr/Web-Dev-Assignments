@@ -35,6 +35,43 @@ var fullName = name1.concat(name2);
 alert("Hello " + fullName + "!");
 
 //7.
+var city = "Hyderabad";
+var city1 = city.replace("Hyder", "Islam");
+document.write("City: " + city + "<br>After Replacement: " + city1 + "<br>");
+
+//8.
+var message1 = "Ali and Sami are best friends. They play cricket and football together.";
+var message = message1.replace(/and/g, "&");
+document.write("String: " + message1 + "<br>After Replacement: " + message + "<br>");
+
+//9.
+var a = "272";
+var n = Number(a);
+document.write("Value: " + a + "<br>Type: " + typeof (a) + "<br>Value: " + n + "<br>Type: " + typeof (n) + "<br>");
+
+//10.
+var x1 = prompt("Convert to Uppercase", "peanuts");
+var x = x1.toUpperCase();
+document.write("User Input: " + x1 + "<br>Uppercase: " + x + "<br>");
+
+//11.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
