@@ -188,12 +188,40 @@ if (n == num) {
 document.write("<h1>Chapters 31-34 - DATE METHODS</h1>");
 
 //1.
+var x = new Date();
+document.write(x + "<br><br>");
 
+//2.
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var n = new Date();
+var x = n.getMonth();
+var mon = months[x];
+document.write("Current month: " + mon + "<br><br>");
 
+//3.
+var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+var n = new Date();
+var x = n.getDay();
+var today = days[x];
+document.write("Today is " + today + "<br><br>");
 
+//4.
+var n = new Date();
+var x = n.getDay();
+if (x == 0 || x == 6) {
+    document.write("It's Fun Day!<br><br>");
+}
 
+//5.
+var n = new Date();
+var x = n.getDate();
+if (x > 0 && x < 16) {
+    document.write("First fifteen days of the month<br><br>");
+} else {
+    document.write("Last fifteen days of the month<br><br>");
+}
 
-
+//6.
 
 
 
