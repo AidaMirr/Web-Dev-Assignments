@@ -129,6 +129,104 @@ document.write("<br>Text: " + text + "<br>There are 2 occurrence(s) of the word 
 document.write("<h1>Chapters 26-30 - MATH METHODS</h1>");
 
 //1.
+var n = +prompt("Enter a Positive Number", "3.45214");
+var x = Math.round(n);
+var y = Math.floor(n);
+var z = Math.ceil(n);
+document.write("<br>Number: " + n + "<br>Round Off Value: " + x + "<br>Floor Value: " + y + "<br>Ceil Value: " + z + "<br><br>");
+
+//2.
+var n = +prompt("Enter a Negative Number", "2.673");
+var x = Math.round(n);
+var y = Math.floor(n);
+var z = Math.ceil(n);
+document.write("Number: " + n + "<br>Round Off Value: " + x + "<br>Floor Value: " + y + "<br>Ceil Value: " + z + "<br><br>");
+
+//3.
+var n = +prompt("Enter a Number", "-4");
+var x = Math.abs(n);
+document.write("The absolute value of " + n + " is " + x + "<br><br>");
+
+//4.
+var random = Math.random();
+var num = (random * 6) + 1;
+var dice = Math.floor(num);
+document.write("Random value of Dice: " + dice + "<br><br>");
+
+//5.
+var random = Math.random();
+var coin = Math.round(random);
+if (coin == 0) {
+    document.write("Random value of Coin Toss: Tails<br><br>");
+} else {
+    document.write("Random value of Coin Toss: Heads<br><br>");
+}
+
+//6.
+var random = Math.random();
+var num = (random * 100) + 1;
+var x = Math.floor(num);
+document.write("Random number between 1 and 100: " + x + "<br><br>");
+
+//7.
+var user1 = prompt("Enter Your Weight in kilograms", "123.4 kilograms");
+document.write("The weight of user is: " + user1 + "<br><br>");
+
+//8,
+var random = Math.random();
+var x = (random * 10) + 1;
+var n = Math.floor(x);
+var num = +prompt("Guess the number(1-10)", "8");
+if (n == num) {
+    alert("Congratulations!\nCorrect Answer")
+} else {
+    alert("You lost\nTry again")
+}
+
+
+//-----------------------------------------Chapters 31-34 - DATE METHODS------------------------------------------------
+document.write("<h1>Chapters 31-34 - DATE METHODS</h1>");
+
+//1.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
