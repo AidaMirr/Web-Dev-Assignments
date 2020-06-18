@@ -117,12 +117,13 @@ document.write("<br>User Input: " + user + "<br>Last Character of Input: " + las
 //18.
 var text = "The quick brown fox jumps over the lazy dog";
 var x = text.length;
+var a = 0;
 for (var i = 0; i < x; i++) {
     if (text.slice(i, i + 3) === "the" || text.slice(i, i + 3) === "The") {
-        alert("found");
+        a++;
     }
 }
-document.write("<br>Text: " + text + "<br>There are 2 occurrence(s) of the word 'the'.<br>");
+document.write("<br>Text: " + text + "<br>There are " + a + " occurrence(s) of the word 'the'.<br>");
 
 
 //-----------------------------------------Chapters 26-30 - MATH METHODS------------------------------------------------
@@ -222,13 +223,54 @@ if (x > 0 && x < 16) {
 }
 
 //6.
+var n = new Date();
+var milli = n.getTime();
+var minutes = Math.floor(milli / (1000 * 60));
+document.write("Current Date: " + n + "<br>Elapsed milliseconds since Jan. 1, 1970: " + milli + "<br>Elapsed minutes since Jan. 1, 1970: " + minutes + "<br><br>");
 
+//7.
+var n = new Date();
+var x = n.getHours();
+if (x > 0 && x < 12) {
+    document.write("<h3>It's AM</h3><br>");
+} else {
+    document.write("<h3>It's PM</h3><br>");
+}
 
+//8.
+var laterDate = new Date("Dec 31 2020");
+document.write("Later Date: " + laterDate + "<br><br>");
 
+//9.
+var today = new Date();
+var ramadan = new Date("Apr 25 2020");
+var todaymilli = today.getTime();
+var ramadanmilli = ramadan.getTime();
+var diff = todaymilli - ramadanmilli;
+var diffdays = Math.floor(diff / (1000 * 60 * 60 * 24));
+document.write(diffdays + " days have passed since 1<sup>st</sup> Ramadan 2020<br><br>");
 
+//10.
+var today = new Date();
+var start = new Date("Jan 1 2020");
+var todaymilli = today.getTime();
+var startmilli = start.getTime();
+var diff = todaymilli - startmilli;
+var diffsec = Math.floor(diff / 1000);
+document.write("On reference date : " + today + "<br>" + diffsec + " seconds have passed since beginning of 2020<br><br>");
 
+//11.
+var today = new Date();
+var x = today.getMonth() + 1;
+var y = today.getDate();
+var z = today.getFullYear() - 100;
+var a = today.getHours();
+var b = today.getMinutes();
+var c = today.getSeconds();
+var year100 = x + " " + y + " " + z + " " + a + ":" + b + ":" + c;
+var hundred = new Date(year100);
 
-
+document.write("Current date : " + today + "<br>100 years back, it was: " + hundred + "<br><br>");
 
 
 
