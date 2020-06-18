@@ -286,12 +286,29 @@ var hundred = new Date(year100);
 document.write("Current date : " + today + "<br>100 years back, it was: " + hundred + "<br><br>");
 
 //13.
+var age = +prompt("Enter Your Age", "40");
+var year = 2020 - age;
+document.write("Your age is: " + age + "<br>Your birth year is: " + year + "<br><br>");
+
+//14.
+var n = new Date();
+var m = n.getMonth();
+var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+var name = prompt("Enter Your Name", "Customer");
+var units = +prompt("Enter Number of Units", "410");
+var charges = +prompt("Enter Charges per unit", "16");
+var netAmt = units * charges;
+var lateAmt = netAmt * (5 / 100);
+var grossAmt = netAmt + lateAmt;
+document.write("<h2>K-Electric Bill</h2>Customer Name: " + name + "<br>Month: " + months[m] + "<br>Number of Units: " + units + "<br>Charges per unit: " + charges + "<br><br>");
+document.write("Net Amount Payable (within Due Date): " + netAmt.toFixed(2) + "<br>Late Payment Surcharge: " + lateAmt.toFixed(2) + "<br>Gross Amount Payable (after Due Date): " + grossAmt.toFixed(2) + "<br><br>");
 
 
 
+//-----------------------------------------Chapters 35-38 - FUNCTIONS------------------------------------------------
+document.write("<h1>Chapters 35-38 - FUNCTIONS</h1>");
 
-
-
+//1.
 
 
 
