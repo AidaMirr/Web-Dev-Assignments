@@ -263,6 +263,19 @@ document.write("On reference date : " + today + "<br>" + diffsec + " seconds hav
 var today = new Date();
 var x = today.getMonth() + 1;
 var y = today.getDate();
+var z = today.getFullYear();
+var a = today.getHours() - 1;
+var b = today.getMinutes();
+var c = today.getSeconds();
+var hour1 = x + " " + y + " " + z + " " + a + ":" + b + ":" + c;
+var hour = new Date(hour1);
+
+document.write("Current date : " + today + "<br>1 hour ago, it was: " + hour + "<br><br>");
+
+//12.
+var today = new Date();
+var x = today.getMonth() + 1;
+var y = today.getDate();
 var z = today.getFullYear() - 100;
 var a = today.getHours();
 var b = today.getMinutes();
@@ -272,6 +285,7 @@ var hundred = new Date(year100);
 
 document.write("Current date : " + today + "<br>100 years back, it was: " + hundred + "<br><br>");
 
+//13.
 
 
 
