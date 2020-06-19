@@ -208,15 +208,15 @@ document.write("Today is " + today + "<br><br>");
 
 //4.
 var n = new Date();
-var x = n.getDay();
-if (x == 0 || x == 6) {
+var day = n.getDay();
+if (day == 0 || day == 6) {
     document.write("It's Fun Day!<br><br>");
 }
 
 //5.
-var n = new Date();
-var x = n.getDate();
-if (x > 0 && x < 16) {
+var today = new Date();
+var days = today.getDate();
+if (days < 16) {
     document.write("First fifteen days of the month<br><br>");
 } else {
     document.write("Last fifteen days of the month<br><br>");
@@ -229,9 +229,9 @@ var minutes = Math.floor(milli / (1000 * 60));
 document.write("Current Date: " + n + "<br>Elapsed milliseconds since Jan. 1, 1970: " + milli + "<br>Elapsed minutes since Jan. 1, 1970: " + minutes + "<br><br>");
 
 //7.
-var n = new Date();
-var x = n.getHours();
-if (x > 0 && x < 12) {
+var today = new Date();
+var hour = today.getHours();
+if (hour < 12) {
     document.write("<h3>It's AM</h3><br>");
 } else {
     document.write("<h3>It's PM</h3><br>");
@@ -261,34 +261,23 @@ document.write("On reference date : " + today + "<br>" + diffsec + " seconds hav
 
 //11.
 var today = new Date();
-var x = today.getMonth() + 1;
-var y = today.getDate();
-var z = today.getFullYear();
-var a = today.getHours() - 1;
-var b = today.getMinutes();
-var c = today.getSeconds();
-var hour1 = x + " " + y + " " + z + " " + a + ":" + b + ":" + c;
-var hour = new Date(hour1);
-
-document.write("Current date : " + today + "<br>1 hour ago, it was: " + hour + "<br><br>");
+document.write("Current date: " + today + "<br>");
+var hour = today.getHours() - 1;
+today.setHours(hour);
+document.write("1 hour ago, it was: " + today + "<br><br>");
 
 //12.
 var today = new Date();
-var x = today.getMonth() + 1;
-var y = today.getDate();
-var z = today.getFullYear() - 100;
-var a = today.getHours();
-var b = today.getMinutes();
-var c = today.getSeconds();
-var year100 = x + " " + y + " " + z + " " + a + ":" + b + ":" + c;
-var hundred = new Date(year100);
-
-document.write("Current date : " + today + "<br>100 years back, it was: " + hundred + "<br><br>");
+document.write("Current date: " + today + "<br>");
+var hundred = today.getFullYear() - 100;
+today.setFullYear(hundred);
+document.write("100 years back, it was: " + today + "<br><br>");
 
 //13.
 var age = +prompt("Enter Your Age", "40");
-var year = 2020 - age;
-document.write("Your age is: " + age + "<br>Your birth year is: " + year + "<br><br>");
+var n = new Date();
+var birthYear = n.getFullYear() - age;
+document.write("Your age is: " + age + "<br>Your birth year is: " + birthYear + "<br><br>");
 
 //14.
 var n = new Date();
@@ -304,14 +293,17 @@ document.write("<h2>K-Electric Bill</h2>Customer Name: " + name + "<br>Month: " 
 document.write("Net Amount Payable (within Due Date): " + netAmt.toFixed(2) + "<br>Late Payment Surcharge: " + lateAmt.toFixed(2) + "<br>Gross Amount Payable (after Due Date): " + grossAmt.toFixed(2) + "<br><br>");
 
 
-
 //-----------------------------------------Chapters 35-38 - FUNCTIONS------------------------------------------------
 document.write("<h1>Chapters 35-38 - FUNCTIONS</h1>");
 
 //1.
+function date() {
+    var n = new Date();
+    document.write(n + "<br>");
+}
+date();
 
-
-
+//2.
 
 
 
