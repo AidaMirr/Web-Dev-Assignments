@@ -304,26 +304,171 @@ function date() {
 date();
 
 //2.
+function greeting() {
+    var firstName = prompt("Enter First Name");
+    var lastName = prompt("Enter Last Name");
+    var fullName = firstName + " " + lastName;
+    alert("Hello " + fullName + " !");
+}
+greeting();
 
+//3.
+function sum() {
+    var num1 = +prompt("Enter First Number");
+    var num2 = +prompt("Enter Second Number");
+    return num1 + num2;
+}
+document.write("<br>The sum is " + sum());
 
+//4.
+var num1 = +prompt("Enter First Number");
+var sign = prompt("Enter Operator (+, -, *, /, %)");
+var num2 = +prompt("Enter Second Number");
 
+function calc(num1, sign, num2) {
+    if (sign === "+") {
+        return num1 + num2;
+    } else if (sign === "-") {
+        return num1 - num2;
+    } else if (sign === "*") {
+        return num1 * num2;
+    } else if (sign === "/") {
+        return num1 / num2;
+    } else if (sign === "%") {
+        return num1 % num2;
+    }
+}
+document.write("<br><br>" + num1 + sign + num2 + "=" + calc(num1, sign, num2));
 
+//5.
+var num1 = +prompt("Enter Number to Calculate Square");
+function square(num) {
+    return num * num
+}
+document.write("<br>Square of " + num1 + " is " + square(num1));
 
+//6.
+var num1 = +prompt("Enter Number to Calculate Factorial");
+function factorial(n) {
+    if (n <= 1) {
+        return 1;
+    } else {
+        return n * factorial(n - 1);
+    }
+}
+document.write("<br>Factorial of " + num1 + " is " + factorial(num1));
 
+//7.
+var num1 = +prompt("Enter Start Number for Counting");
+var num2 = +prompt("Enter End Number for Counting");
+function counting(num1, num2) {
+    for (var i = num1; i <= num2; i++) {
+        document.write("<br>" + i);
+    }
+}
+document.write("<br><br>Counting from " + num1 + " to " + num2);
+counting(num1, num2);
 
+//8.
+var base = +prompt("Enter Base of Triangle");
+var perp = +prompt("Enter Perpendicular of Triangle");
+function calculateHypotenuse(base, perp) {
+    var hypo = calculateSquare(base) + calculateSquare(perp);
+    function calculateSquare(num) {
+        return num * num;
+    }
+    return Math.sqrt(hypo);
+}
+document.write("<br><br>Hypotenuse of Triangle with Base " + base + " and Perpendicular " + perp + " = " + calculateHypotenuse(base, perp));
 
+//9.
+//i.Arguments as value
 
+function area(width, height) {
+    return width * height;
+}
+document.write("<br>Area of Rectangle: " + area(4, 2));
 
+//ii. Arguments as variables
+var width = 4;
+var height = 2;
+function area(width, height) {
+    return width * height;
+}
+document.write("<br>Area of Rectangle: " + area(width, height));
 
+//10.
+function palindrome(word) {
+    word = word.toLowerCase();
+    var check = true;
+    var len = word.length;
+    for (var i = 0; i < Math.floor(len / 2); i++) {
+        if (word[i] !== word[len - 1 - i]) {
+            check = false;
+        }
+    }
+    if (check === true) {
+        alert(word + " is a palindrome");
+    }
+    else {
+        alert(word + " is not a palindrome");
+    }
+}
+palindrome(prompt("Enter Word to Check if it is Palindrome"));
 
+//11.
+var user = prompt("Enter a String", "the quick brown fox");
+function titleCase(string) {
+    var arr = string.split(" ");
+    for (var i = 0; i < arr.length; i++) {
+        arr[i] = arr[i].charAt(0).toUpperCase() + arr[i].substr(1).toLowerCase();
+    }
+    string = arr.join(" ");
+    return string;
+}
+document.write("<br><br>String: " + user + "<br>Title Case: " + titleCase(user));
 
+//12.
+var user = prompt("Enter a String to Find Longest Word", "Web Development Tutorial");
+function longest(string) {
+    var arr = string.split(" ");
+    var longest = arr[0];
+    for (var i = 0; i < arr.length; i++) {
+        if (longest.length < arr[i].length) {
+            longest = arr[i];
+        }
+    }
+    return longest;
+}
+document.write("<br><br>String: " + user + "<br>Longest Word: " + longest(user));
 
+//13.
+var string = prompt("Enter any String", "JSResources.com");
+var letter = prompt("Enter a Letter to Count Occurence", "o");
+function count(string, letter) {
+    var count = 0;
+    for (var i = 0; i < string.length; i++) {
+        if (string[i] == letter) {
+            count++;
+        }
+    }
+    return count;
+}
+document.write("<br><br>The letter " + letter + " occurs " + count(string, letter) + " times in " + string);
 
+//14.
+var radius = +prompt("Enter Radius of Circle", "4");
 
-
-
-
-
+function calcCircumference(radius) {
+    var circumference = 2 * 3.14 * radius;
+    document.write("<br>The Circumference of Circle is " + circumference.toFixed(2));
+}
+function calcArea(radius) {
+    var area = 3.14159 * radius * radius;
+    document.write("<br>The Area of Circle is " + area.toFixed(2));
+}
+calcCircumference(radius);
+calcArea(radius);
 
 
 
