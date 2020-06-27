@@ -1,0 +1,72 @@
+
+   /* ---- particles.js container ---- */
+   
+   #particles-js{
+     width: auto;
+     height: auto;
+     background-color:black;
+     justify-content: center;
+     display: flex;
+     align-items: center;
+   }
+   
+
+/* CALCULATOR CSS */
+
+.calc{
+    padding: 10px;
+    width: 300px;
+    height: 500px;
+    background-color:black;
+    position: absolute;
+    top: auto;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.calc p{
+    text-align: right;
+	height: 2em;
+	margin: 0 auto;
+    padding-top: auto;
+    background-color: lightgray;
+    width: auto;
+}
+.calc #history{
+    font-size: 17px;
+	color: #919191;
+}
+.calc #result{
+    font-size: 35px;
+    font-family: cursive;
+    font-weight: bold;
+}
+.calc button{
+    width: 55px;
+    height: 55px;
+	margin: 7px;
+    float: left;
+	border-width: 0;
+	font-weight: bold;
+    font-size: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+.calc .equals{
+    height: 127px;
+}
+.calc .zero{
+    width: 127px;
+}
+.calc table{
+    margin-top: 30px;   
+}
+.calc .nums{
+    background-color:lightgray;
+}
+.calc .opr{
+    background-color:darkgray;
+
+}
+.calc .equals, .calc .zero{
+    background-color:lightblue;
+}
