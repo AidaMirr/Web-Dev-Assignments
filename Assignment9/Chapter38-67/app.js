@@ -1,5 +1,4 @@
 //-----------------Assignment 38-42 - FUNCTIONS, SWITCH STATEMENTS, WHILE... DO-WHILE LOOPS----------------
-
 //1.
 function power(a, b) {
     return Math.pow(a, b);
@@ -171,7 +170,6 @@ function currencyNotes() {
 currencyNotes();
 
 //---------------------------------------Assignment 43-48 - EVENTS------------------------------------------
-
 //1.
 //Done in index.html
 
@@ -201,8 +199,6 @@ function decrease() {
 }
 
 //---------------------------------------Assignment 49-52 - EVENTS------------------------------------------
-
-
 //1.
 function submit() {
     var fname = document.getElementById('fname').value;
@@ -212,11 +208,10 @@ function submit() {
     document.write("<br>Email: " + email);
 }
 
-
 //2.
 var div = document.getElementById('para')
 var text1 = `Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio minima ducimus cupiditate dignissimos nobis a rerum soluta ut dolore esse nam, quas, quod vitae optio, itaque vel incidunt in ex.Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi, nisi nulla! Consequuntur in minus ipsa labore exercitationem, rem vel delectus itaque molestiae modi, unde non officia ipsam, minima ea dolor?Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis accusantium sapiente dolorem minus esse totam ratione beatae, amet explicabo ipsum delectus hic nihil possimus eius tempore pariatur accusamus aspernatur aperiam.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rem amet incidunt accusantium voluptates eius minus saepe. Maxime numquam inventore, assumenda illum, impedit excepturi, sed aperiam labore nam saepe adipisci tempore. `
-var text2 = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio minima ducimus cupiditate dignissimos >>>>`
+var text2 = `Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio minima ducimus cupiditate dignissimos `
 function showMore() {
     div.children[0].innerText = text1
     div.children[1].innerText = 'Show Less'
@@ -255,43 +250,29 @@ function edit(cell) {
     document.getElementById("level").value = row.cells[2].innerHTML;
 }
 
-// <!-- chap53-58
-
-// 1-Consider you have 4 images in a file as shown below: 
-
-
-// Modal code is available in this assignment file.
-var arrImgSrc = ['images/1.jpg', 'images/2.jpg', 'images/3.jpg', 'images/4.png']
-var imgDiv = document.getElementById('img')
-var modal = document.getElementById('modal');
-modal.classList.add('modal-open')
-modal.classList.remove('modal-close')
-for (var i = 0; i < arrImgSrc.length; i++) {
-    var img = document.createElement('img')
-    var imgAtt = document.createAttribute('src')
-    img.src = arrImgSrc[i]
-    img.setAttribute('onclick', 'open(arrImgSrc[i])')
-    imgDiv.appendChild(img)
+//---------------------------------------Assignment 53-57 - EVENTS------------------------------------------
+//1.
+var images = document.getElementById("images");
+var paths = ["images/others/1.jpg", "images/others/2.jpg", "images/others/3.jpg", "images/others/4.png", "images/others/5.jpg", "images/others/6.jpg", "images/others/7.png", "images/others/8.jpg", "images/others/9.jpg", "images/others/10.jpg", "images/others/11.jpg", "images/others/12.jpg", "images/others/13.jpg", "images/others/14.png", "images/others/15.jpg"];
+for (var i = 0; i < paths.length; i++) {
+    images.innerHTML += "<img class = 'format' src=" + paths[i] + " alt='imageError' onclick='getModel(this)'>";
 }
-function open(imgSrc) {
-    console.log('clicked')
-
-    modal.classList.add('modal-open')
-    modal.classList.remove('modal-close')
-    var imgModal = document.getElementById('modal-img')
-    imgModal.src = imgSrc;
+function getModel(path) {
+    var modal = document.getElementById('modal');
+    modal.classList.add('modal-open');
+    modal.classList.remove('modal-close');
+    modal.style.display = "block";
+    document.getElementById("modal-img").src = path.src;
+    console.log(path);
 }
 function onClosedImagModal() {
-    modal.classList.remove('modal-open')
-    modal.classList.add('modal-close')
+    var modal = document.getElementById('modal');
+    modal.classList.remove('modal-open');
+    modal.classList.add('modal-close');
     setTimeout(() => { modal.style.display = "none"; }, 550)
 }
 
-
-
-// 2. Create a paragraph and two buttons “zoom in ”(+) and “zoom out”(-).
-//  On each click on “zoom in”(+) , add 10px in font size of paragraph.
-// And on each click on “zoom out”(-) , minus 10px in font size of paragraph. -->
+//2.
 var pTag = document.getElementById('zoom')
 var size = 10
 function zoomIn() {
@@ -303,68 +284,51 @@ function zoomOut() {
     pTag.style.fontSize = `${size}px`
 }
 
-// <!-- chap58-67
+//---------------------------------------Assignment 58-67 - DOM------------------------------------------
+//1.
 
-// 1- Consider you have following code snippet:
-// (Copy it in your HTML file)
-// <div>
-// <h1> DOM </h1>
-// <div id=”form-content” class=”content”>
-// <label for=”first-name”>First Name</label>
-// <input type=”text” id=”first-name” />
-// <label for=”last-name”>Last Name</label>
-// <input type=”text” id=”last-name” />
-// <label for=”email”>Email</label>
-// <input type=”text” id=”email” />
-// </div>
-// <div id=”main-content” class=”content”>
-// <p class=”render”> First Name : Alex</p>
-// <p class=”render” id=”lastName”>Last Name: Bank</p>
-// <p class=”render”> Email : alexbank@example.com</p>
-// <p class=”render”> Country : Pakistan </p>
-// <p class=”render”> contact : +92 300 1234567</p>
-// </div>
-// </div>
-
-// i- Get element of id “main-content” and assign them in a variable.
-// ii- Display all child elements of “main-content” element.
-// iii- Get all elements of class “render” and show their innerHTML
-// in browser.
-// iv- Fill input value whose element id first-name using javascript.
-// v-  Repeat part iv for id ”last-name” and “email”.
-
+//i.
 var mainContent = document.getElementById('main-content')
+//ii.
 console.log(mainContent.children)
+//iii.
 var render = document.getElementsByClassName('render')
 for (var i = 0; i < render.length; i++) {
-
     console.log(render[i].innerHTML)
 }
-
+//iv & v.
 var firstName = document.getElementById('first-name')
 var lastName = document.getElementById('last-name')
 var email = document.getElementById('e-mail')
 
-firstName.value = "Anum"
-lastName.value = "Essani"
-email.value = "anum.essani@gmail.com"
+firstName.value = "Aida"
+lastName.value = "Mir"
+email.value = "aidamir@live.com"
 
-
-
-
-// 2. use HTML code of question 1 and show the result on browser.
-
-// i. What is node type of element having id “form-content”.
-// ii. Show node type of element having id “lastName” and its child node.
-// iii.Update child node of element having id “lastName”.
-// iv. Get First and last child of id “main-content”.
-// v. Get next and previous siblings of id “lastName ”.
-// vi. Get parent node and node type of element having id “email”
+//2.
+//i.
 console.log(document.getElementById("form-content").nodeType)
+document.write(document.getElementById('form-content').nodeType);
+//ii.
+document.write(document.getElementById('last-name').nodeType);
+var cNodes = document.getElementById('last-name').childNodes;
+for (var i = 0; i < cNodes.length; i++) {
+    document.write(cNodes[i].nodeType);
+}
 console.log(document.getElementById("lastName").childNodes)
+//iii.
+var cn = document.getElementById('last-name');
+cn.childNodes = 'p';
 console.log(document.getElementById("lastName").childNodes[0].value = "LastName Update")
-
+//iv. 
+document.write(document.getElementById('main-content').firstChild);
+document.write(document.getElementById('main-content').lastChild);
 console.log(mainContent.firstChild, mainContent.lastChild)
+//v.
+document.write(document.getElementById('last-name').nextSibling);
+document.write(document.getElementById('last-name').previousSibling);
 console.log(document.getElementById('lastName').nextSibling, document.getElementById('lastName').previousSibling)
+//vi.
+document.write(document.getElementById('email').parentNode);
+document.write(document.getElementById('email').nodeType);
 console.log(document.getElementById('email').parentElement)
-
