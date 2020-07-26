@@ -3,6 +3,9 @@
     background-color: black;
     text-decoration: none;
 }
+body{
+    background-color: black; 
+}
 .heading{
     background-color:black;
     font-size: 72px;
