@@ -13,13 +13,13 @@ function addTodo() {
     input.value = todo_item.value;
 
     var delBtn = document.createElement("button");
-    var delText = document.createTextNode("DELETE");
+    var delText = document.createTextNode("delete");
     delBtn.setAttribute("class", "dlt");
     delBtn.setAttribute("onclick", "deleteItem(this)");
     delBtn.appendChild(delText);
 
     var editBtn = document.createElement("button");
-    var editText = document.createTextNode("EDIT");
+    var editText = document.createTextNode("edit");
     editBtn.setAttribute("class", "edit");
     editBtn.setAttribute("onclick", "editItem(this)");
     editBtn.appendChild(editText);
